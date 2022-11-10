@@ -26,26 +26,36 @@ class Login extends React.Component {
                                     <div className="col-lg-12">
                                         <div className="bs-component">
                                             <fieldset>
-                                                <FormGroup label="Email: *" htmlFor="exampleInputEmail ">
-                                                    <input type="email"
-                                                           value={this.state.email}
-                                                           onChange={e => this.setState({email: e.target.value})}
-                                                           className="form-group"
-                                                           id="exampleInputEmail"
-                                                           aria-describedby="emailHelp"
-                                                           placeholder="Digite o Email"/>
-                                                </FormGroup>
-                                                <FormGroup label="Senha: *" htmlFor="exampleInputEmail">
-                                                    <input type="password"
-                                                           value={this.state.senha}
-                                                           onChange={e => this.setState({senha: e.target.value})}
-                                                           className="form-group"
-                                                           id="exampleInputPassword1"
-                                                           placeholder="Password"/>
-                                                </FormGroup>
-                                                <button onClick={this.entrar} className="btn btn-success">Entrar
+                                                <div className="row">
+                                                    <div className="col-lg-12">
+                                                        <div className="bs-component">
+                                                            <div className="form-group">
+                                                                <label htmlFor="exampleInputEmail1">Email: *</label>
+                                                                <input type="email"
+                                                                       value={this.state.email}
+                                                                       onChange={(e) => this.setState({email: e.target.value})}
+                                                                       className="form-control"
+                                                                       id="exampleInputEmail1"
+                                                                       aria-describedby="emailHelp"
+                                                                       placeholder="Digite o Email"/>
+                                                            </div>
+                                                            <div className="form-group">
+                                                                <label htmlFor="exampleInputPassword1">Senha: *</label>
+                                                                <input type="password"
+                                                                       value={this.state.senha}
+                                                                       onChange={(e) => this.setState({senha: e.target.value})}
+                                                                       className="form-control"
+                                                                       id="exampleInputPassword1"
+                                                                       placeholder="Password"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button onClick={this.entrar} type="button"
+                                                        className="btn btn-success">Entrar
                                                 </button>
-                                                <button className="btn btn-danger">Cadastrar</button>
+                                                <button type="button" className="btn btn-danger">Cadastrar</button>
                                             </fieldset>
                                         </div>
                                     </div>
